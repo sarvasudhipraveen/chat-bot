@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom scrollbar styling to match ChatGPT's sleek layout */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.scrollbar-light::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.scrollbar-light::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Custom layout behaviors */
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Markdown Custom Content Styles */
+.prose {
+  font-size: 0.975rem;
+  line-height: 1.625;
+  color: inherit;
+}
+
+.prose p {
+  margin-bottom: 0.75rem;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-weight: 600;
+  color: inherit;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose h1 { font-size: 1.5rem; }
+.prose h2 { font-size: 1.25rem; }
+.prose h3 { font-size: 1.1rem; }
+
+.prose ul, .prose ol {
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose ul {
+  list-style-type: disk;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li {
+  margin-bottom: 0.25rem;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 0.15rem 0.3rem;
+  border-radius: 0.25rem;
+}
+
+.theme-light .prose code {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.prose pre {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  overflow-x: auto;
+  border-radius: 0.375rem;
+  background-color: #0d0d0d;
+  color: #f8f8f2;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.9rem;
+  color: inherit;
+}
+
+.prose blockquote {
+  border-left: 4px solid rgba(255, 255, 255, 0.2);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 0.75rem 0;
+}
+
+.theme-light .prose blockquote {
+  border-left: 4px solid rgba(0, 0, 0, 0.15);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+}
+
+.prose th, .prose td {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.theme-light .prose th, .theme-light .prose td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prose th {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.theme-light .prose th {
+  background-color: rgba(0, 0, 0, 0.03);
+}

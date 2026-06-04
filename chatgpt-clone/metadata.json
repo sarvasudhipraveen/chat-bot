@@ -1,0 +1,6 @@
+{
+  "name": "ChatGPT Clone",
+  "description": "A high-fidelity ChatGPT clone featuring a sidebar with chat history, streaming responses, dynamic landing screen prompts, model selection, persona presets, and Google Search grounding.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
